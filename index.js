@@ -2,8 +2,27 @@
 module.exports = parse;
 
 function parse(str) {
-  return hex6(str)
-    || hex3(str);
+  return hex3(str)
+    || hex6(str)
+    || rgb(str)
+    || rgba(str);
+}
+
+function rgb(str) {
+  if (0 == str.indexOf('rgb(')) {
+    str = str.match(/rgb\(([^)]+)\)/)[1];
+    var parts = str.split(/ *, */).map(Number);
+    return {
+      r: parts[0],
+      g: parts[1],
+      b: parts[2],
+      a: 1
+    }
+  }
+}
+
+function rgba(str) {
+
 }
 
 function hex6(str) {
