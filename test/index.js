@@ -9,3 +9,12 @@ describe('#RGB', function(){
     parse('#fc0').a.should.equal(1);
   })
 })
+
+describe('#RRGGBB', function(){
+  it('should parse', function(){
+    parse('#ffcc00').r.should.equal(255);
+    parse('#ffcc00').g.should.equal(204);
+    parse('#ffcc00').b.should.equal(0);
+    parse('#ffcc00').a.should.equal(1);
+  })
+})
