@@ -22,7 +22,16 @@ function rgb(str) {
 }
 
 function rgba(str) {
-
+  if (0 == str.indexOf('rgba(')) {
+    str = str.match(/rgba\(([^)]+)\)/)[1];
+    var parts = str.split(/ *, */).map(Number);
+    return {
+      r: parts[0],
+      g: parts[1],
+      b: parts[2],
+      a: parts[3]
+    }
+  }
 }
 
 function hex6(str) {

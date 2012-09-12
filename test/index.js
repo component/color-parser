@@ -27,3 +27,12 @@ describe('rgb(n, n, n)', function(){
     parse('rgb(255, 204, 0)').a.should.equal(1);
   })
 })
+
+describe('rgba(n, n, n, n)', function(){
+  it('should parse', function(){
+    parse('rgb(255, 204, 0, 1)').r.should.equal(255);
+    parse('rgb(255, 204, 0, 1)').g.should.equal(204);
+    parse('rgb(255, 204, 0, 1)').b.should.equal(0);
+    parse('rgb(255, 204, 0, 1)').a.should.equal(1);
+  })
+})
