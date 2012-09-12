@@ -30,9 +30,15 @@ describe('rgb(n, n, n)', function(){
 
 describe('rgba(n, n, n, n)', function(){
   it('should parse', function(){
-    parse('rgb(255, 204, 0, 1)').r.should.equal(255);
-    parse('rgb(255, 204, 0, 1)').g.should.equal(204);
-    parse('rgb(255, 204, 0, 1)').b.should.equal(0);
-    parse('rgb(255, 204, 0, 1)').a.should.equal(1);
+    parse('rgba(255, 204, 0, 1)').r.should.equal(255);
+    parse('rgba(255, 204, 0, 1)').g.should.equal(204);
+    parse('rgba(255, 204, 0, 1)').b.should.equal(0);
+    parse('rgba(255, 204, 0, 1)').a.should.equal(1);
+  })
+
+  it('should support floats', function(){
+    parse('rgba(0,0,0,0.5)').a.should.equal(0.5);
+    parse('rgba(0,0,0,.5)').a.should.equal(0.5);
+    parse('rgba(0,0,0,.75)').a.should.equal(0.75);
   })
 })
