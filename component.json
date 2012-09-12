@@ -1,0 +1,12 @@
+{
+  "name": "color-parser",
+  "repo": "component/color-parser",
+  "description": "CSS color string parser",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
