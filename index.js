@@ -5,7 +5,19 @@
 
 var colors = require('./colors');
 
+/**
+ * Expose `parse`.
+ */
+
 module.exports = parse;
+
+/**
+ * Parse `str`.
+ *
+ * @param {String} str
+ * @return {Object}
+ * @api public
+ */
 
 function parse(str) {
   return named(str)
@@ -14,6 +26,14 @@ function parse(str) {
     || rgb(str)
     || rgba(str);
 }
+
+/**
+ * Parse named css color `str`.
+ *
+ * @param {String} str
+ * @return {Object}
+ * @api private
+ */
 
 function named(str) {
   var c = colors[str.toLowerCase()];
@@ -24,6 +44,14 @@ function named(str) {
     b: c[2]
   }
 }
+
+/**
+ * Parse rgb(n, n, n)
+ *
+ * @param {String} str
+ * @return {Object}
+ * @api private
+ */
 
 function rgb(str) {
   if (0 == str.indexOf('rgb(')) {
@@ -38,6 +66,14 @@ function rgb(str) {
   }
 }
 
+/**
+ * Parse rgba(n, n, n, n)
+ *
+ * @param {String} str
+ * @return {Object}
+ * @api private
+ */
+
 function rgba(str) {
   if (0 == str.indexOf('rgba(')) {
     str = str.match(/rgba\(([^)]+)\)/)[1];
@@ -51,6 +87,14 @@ function rgba(str) {
   }
 }
 
+/**
+ * Parse #nnnnnn
+ *
+ * @param {String} str
+ * @return {Object}
+ * @api private
+ */
+
 function hex6(str) {
   if ('#' == str[0] && 7 == str.length) {
     return {
@@ -61,6 +105,14 @@ function hex6(str) {
     }
   }
 }
+
+/**
+ * Parse #nnn
+ *
+ * @param {String} str
+ * @return {Object}
+ * @api private
+ */
 
 function hex3(str) {
   if ('#' == str[0] && 4 == str.length) {
