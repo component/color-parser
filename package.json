@@ -2,7 +2,7 @@
   "name": "color-parser",
   "repo": "component/color-parser",
   "description": "CSS color string parser",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": ["color", "parse", "parser", "css"],
   "dependencies": {},
   "devDependencies": {
