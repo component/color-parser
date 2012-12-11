@@ -1,6 +1,14 @@
 
 var parse = require('..');
 
+describe('named', function(){
+  it('should parse', function(){
+    parse('blue').r.should.equal(0);
+    parse('blue').g.should.equal(0);
+    parse('blue').b.should.equal(255);
+  })
+})
+
 describe('#RGB', function(){
   it('should parse', function(){
     parse('#fc0').r.should.equal(255);

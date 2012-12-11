@@ -1,11 +1,28 @@
 
+/**
+ * Module dependencies.
+ */
+
+var colors = require('./colors');
+
 module.exports = parse;
 
 function parse(str) {
-  return hex3(str)
+  return named(str)
+    || hex3(str)
     || hex6(str)
     || rgb(str)
     || rgba(str);
+}
+
+function named(str) {
+  var c = colors[str];
+  if (!c) return;
+  return {
+    r: c[0],
+    g: c[1],
+    b: c[2]
+  }
 }
 
 function rgb(str) {
