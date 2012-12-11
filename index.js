@@ -16,7 +16,7 @@ function parse(str) {
 }
 
 function named(str) {
-  var c = colors[str];
+  var c = colors[str.toLowerCase()];
   if (!c) return;
   return {
     r: c[0],

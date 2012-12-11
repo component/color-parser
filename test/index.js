@@ -7,6 +7,12 @@ describe('named', function(){
     parse('blue').g.should.equal(0);
     parse('blue').b.should.equal(255);
   })
+  
+  it('should parse case insensitive', function(){
+    parse('Blue').r.should.equal(0);
+    parse('BLUE').g.should.equal(0);
+    parse('Blue').b.should.equal(255);
+  })
 })
 
 describe('#RGB', function(){
