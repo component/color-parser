@@ -14,5 +14,6 @@
       "color-parser/index.js": "index.js",
       "color-parser/colors.js": "colors.js"
     }
-  }
+  },
+  "main": "index"
 }
