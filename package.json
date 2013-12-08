@@ -3,6 +3,7 @@
   "repo": "component/color-parser",
   "description": "CSS color string parser",
   "version": "0.1.0",
+  "main": "index.js",
   "keywords": [
     "color",
     "parse",
