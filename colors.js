@@ -119,6 +119,7 @@ module.exports = {
   , plum: [221, 160, 203]
   , powderblue: [176, 224, 230]
   , purple: [128, 0, 128]
+  , rebeccapurple: [102, 51, 153]
   , red: [255, 0, 0]
   , rosybrown: [188, 143, 143]
   , royalblue: [65, 105, 225]

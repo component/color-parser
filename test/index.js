@@ -6,12 +6,18 @@ describe('named', function(){
     parse('blue').r.should.equal(0);
     parse('blue').g.should.equal(0);
     parse('blue').b.should.equal(255);
+    parse('rebeccapurple').r.should.equal(102);
+    parse('rebeccapurple').g.should.equal(51);
+    parse('rebeccapurple').b.should.equal(153);
   })
-  
+
   it('should parse case insensitive', function(){
     parse('Blue').r.should.equal(0);
     parse('BLUE').g.should.equal(0);
     parse('Blue').b.should.equal(255);
+    parse('Rebeccapurple').r.should.equal(102);
+    parse('REBECCAPURPLE').g.should.equal(51);
+    parse('Rebeccapurple').b.should.equal(153);
   })
 })
 
