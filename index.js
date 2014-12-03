@@ -41,7 +41,8 @@ function named(str) {
   return {
     r: c[0],
     g: c[1],
-    b: c[2]
+    b: c[2],
+    a: 1
   }
 }
 
