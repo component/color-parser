@@ -11,6 +11,10 @@ describe('named', function(){
     parse('rebeccapurple').b.should.equal(153);
   })
 
+  it('should be sane', function(){
+    parse('blue').should.eql(parse('rgb(0,0,255)'));
+  })
+
   it('should parse case insensitive', function(){
     parse('Blue').r.should.equal(0);
     parse('BLUE').g.should.equal(0);
